@@ -126,24 +126,60 @@ class App extends Component {
                                 return (
                                   <div key = {index} > 
                                     <ListGroup.Item
-                                        variant="dark"
-                                        action
-                                        style={{display:"flex",
-                                                justifyContent:'space-between'
-                                      }}
+                                        className="todo-item"
+                                        style={{
+                                            display: "flex",
+                                            justifyContent: "space-between",
+                                            alignItems: "center",
+                                            padding: "15px 20px",
+                                            marginBottom: "10px",
+                                            backgroundColor: "#f8f9fa",
+                                            border: "1px solid #dee2e6",
+                                            borderRadius: "8px",
+                                            boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
+                                        }}
                                     >
-                                        {item.value}
-                                        <span>
-                                        <Button style={{marginRight:"10px"}}
-                                        variant = "light"
-                                        onClick={() => this.deleteItem(item.id)}>
-                                          Delete
-                                        </Button>
-                                        <Button variant = "light"
-                                        onClick={() => this.editItem(index)}>
-                                          Edit
-                                        </Button>
+                                        <span className="todo-text" style={{
+                                            fontSize: "16px",
+                                            fontWeight: "500",
+                                            color: "#333",
+                                            flex: "1",
+                                            textAlign: "left",
+                                            marginRight: "15px",
+                                            wordBreak: "break-word"
+                                        }}>
+                                            {item.value}
                                         </span>
+                                        <div className="button-group" style={{
+                                            display: "flex",
+                                            gap: "8px",
+                                            flexShrink: "0"
+                                        }}>
+                                            <Button 
+                                                size="sm"
+                                                variant="outline-primary"
+                                                onClick={() => this.editItem(index)}
+                                                style={{
+                                                    minWidth: "60px",
+                                                    fontSize: "14px",
+                                                    fontWeight: "500"
+                                                }}
+                                            >
+                                                Edit
+                                            </Button>
+                                            <Button 
+                                                size="sm"
+                                                variant="outline-danger"
+                                                onClick={() => this.deleteItem(item.id)}
+                                                style={{
+                                                    minWidth: "70px",
+                                                    fontSize: "14px",
+                                                    fontWeight: "500"
+                                                }}
+                                            >
+                                                Delete
+                                            </Button>
+                                        </div>
                                     </ListGroup.Item>
                                   </div>
                                 );
