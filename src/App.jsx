@@ -66,13 +66,14 @@ class App extends Component {
 
     editItem = (index) => {
       const todos = [...this.state.list];
-      const editedTodo = prompt('Edit the todo:');
+      const currentValue = todos[index].value;
+      const editedTodo = prompt('Edit the todo:', currentValue);
       if (editedTodo !== null && editedTodo.trim() !== '') {
         let updatedTodos = [...todos]
-        updatedTodos[index].value= editedTodo
+        updatedTodos[index].value = editedTodo.trim()
         this.setState({
           list: updatedTodos,
-      });
+        });
       }
     }
 
