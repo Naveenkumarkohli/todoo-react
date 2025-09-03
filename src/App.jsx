@@ -155,53 +155,56 @@ class App extends Component {
                                         }}
                                     >
                                         <div className="todo-text" style={{
-                                            fontSize: "18px",
+                                            fontSize: "16px",
                                             fontWeight: "500",
                                             color: "#2c3e50",
-                                            padding: "20px 30px",
-                                            lineHeight: "1.6",
+                                            padding: "16px 20px",
+                                            lineHeight: "1.5",
                                             wordWrap: "break-word",
                                             overflowWrap: "break-word",
                                             hyphens: "auto",
-                                            borderBottom: "1px solid #f1f3f4"
+                                            borderBottom: "1px solid #e9ecef",
+                                            minHeight: "50px"
                                         }}>
                                             {item.value}
                                         </div>
                                         <div className="button-group" style={{
                                             display: "flex",
-                                            gap: "10px",
-                                            padding: "15px 30px",
+                                            gap: "8px",
+                                            padding: "12px 20px",
                                             backgroundColor: "#f8f9fa",
                                             justifyContent: "flex-end"
                                         }}>
                                             <Button 
+                                                size="sm"
                                                 variant="success"
                                                 onClick={() => this.editItem(index)}
                                                 style={{
-                                                    minWidth: "80px",
-                                                    fontSize: "16px",
-                                                    fontWeight: "600",
+                                                    minWidth: "60px",
+                                                    fontSize: "14px",
+                                                    fontWeight: "500",
                                                     backgroundColor: "#28a745",
                                                     borderColor: "#28a745",
                                                     color: "white",
-                                                    padding: "10px 16px",
-                                                    borderRadius: "8px"
+                                                    padding: "6px 12px",
+                                                    borderRadius: "6px"
                                                 }}
                                             >
                                                 Edit
                                             </Button>
                                             <Button 
+                                                size="sm"
                                                 variant="danger"
                                                 onClick={() => this.deleteItem(item.id)}
                                                 style={{
-                                                    minWidth: "90px",
-                                                    fontSize: "16px",
-                                                    fontWeight: "600",
+                                                    minWidth: "70px",
+                                                    fontSize: "14px",
+                                                    fontWeight: "500",
                                                     backgroundColor: "#dc3545",
                                                     borderColor: "#dc3545",
                                                     color: "white",
-                                                    padding: "10px 16px",
-                                                    borderRadius: "8px"
+                                                    padding: "6px 12px",
+                                                    borderRadius: "6px"
                                                 }}
                                             >
                                                 Delete
