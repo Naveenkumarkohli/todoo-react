@@ -146,22 +146,26 @@ class App extends Component {
                                             display: "flex",
                                             justifyContent: "space-between",
                                             alignItems: "center",
-                                            padding: "15px 20px",
-                                            marginBottom: "10px",
-                                            backgroundColor: "#f8f9fa",
-                                            border: "1px solid #dee2e6",
-                                            borderRadius: "8px",
-                                            boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
+                                            padding: "20px 30px",
+                                            marginBottom: "15px",
+                                            backgroundColor: "#ffffff",
+                                            border: "2px solid #e9ecef",
+                                            borderRadius: "12px",
+                                            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                                            minHeight: "70px"
                                         }}
                                     >
                                         <span className="todo-text" style={{
-                                            fontSize: "16px",
+                                            fontSize: "18px",
                                             fontWeight: "500",
-                                            color: "#333",
+                                            color: "#2c3e50",
                                             flex: "1",
                                             textAlign: "left",
-                                            marginRight: "15px",
-                                            wordBreak: "break-word"
+                                            marginRight: "20px",
+                                            whiteSpace: "nowrap",
+                                            overflow: "hidden",
+                                            textOverflow: "ellipsis",
+                                            lineHeight: "1.5"
                                         }}>
                                             {item.value}
                                         </span>
@@ -171,31 +175,33 @@ class App extends Component {
                                             flexShrink: "0"
                                         }}>
                                             <Button 
-                                                size="sm"
                                                 variant="success"
                                                 onClick={() => this.editItem(index)}
                                                 style={{
-                                                    minWidth: "60px",
-                                                    fontSize: "14px",
-                                                    fontWeight: "500",
+                                                    minWidth: "80px",
+                                                    fontSize: "16px",
+                                                    fontWeight: "600",
                                                     backgroundColor: "#28a745",
                                                     borderColor: "#28a745",
-                                                    color: "white"
+                                                    color: "white",
+                                                    padding: "10px 16px",
+                                                    borderRadius: "8px"
                                                 }}
                                             >
                                                 Edit
                                             </Button>
                                             <Button 
-                                                size="sm"
                                                 variant="danger"
                                                 onClick={() => this.deleteItem(item.id)}
                                                 style={{
-                                                    minWidth: "70px",
-                                                    fontSize: "14px",
-                                                    fontWeight: "500",
+                                                    minWidth: "90px",
+                                                    fontSize: "16px",
+                                                    fontWeight: "600",
                                                     backgroundColor: "#dc3545",
                                                     borderColor: "#dc3545",
-                                                    color: "white"
+                                                    color: "white",
+                                                    padding: "10px 16px",
+                                                    borderRadius: "8px"
                                                 }}
                                             >
                                                 Delete
