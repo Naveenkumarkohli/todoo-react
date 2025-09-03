@@ -60,7 +60,18 @@
 }
 
 .button-group .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Improved todo item layout */
+.todo-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.todo-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15) !important;
 }
 
 /* Improve input styling */

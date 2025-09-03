@@ -144,50 +144,48 @@ class App extends Component {
                                         className="todo-item"
                                         style={{
                                             display: "flex",
-                                            flexDirection: "column",
-                                            padding: "0",
-                                            marginBottom: "15px",
+                                            alignItems: "center",
+                                            justifyContent: "space-between",
+                                            padding: "12px 16px",
+                                            marginBottom: "10px",
                                             backgroundColor: "#ffffff",
-                                            border: "2px solid #e9ecef",
-                                            borderRadius: "12px",
-                                            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                                            overflow: "hidden"
+                                            border: "1px solid #e9ecef",
+                                            borderRadius: "8px",
+                                            boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                                            minHeight: "50px"
                                         }}
                                     >
                                         <div className="todo-text" style={{
-                                            fontSize: "16px",
+                                            fontSize: "15px",
                                             fontWeight: "500",
                                             color: "#2c3e50",
-                                            padding: "16px 20px",
-                                            lineHeight: "1.5",
+                                            lineHeight: "1.4",
                                             wordWrap: "break-word",
                                             overflowWrap: "break-word",
-                                            hyphens: "auto",
-                                            borderBottom: "1px solid #e9ecef",
-                                            minHeight: "50px"
+                                            flex: "1",
+                                            marginRight: "12px"
                                         }}>
                                             {item.value}
                                         </div>
                                         <div className="button-group" style={{
                                             display: "flex",
-                                            gap: "8px",
-                                            padding: "12px 20px",
-                                            backgroundColor: "#f8f9fa",
-                                            justifyContent: "flex-end"
+                                            gap: "6px",
+                                            flexShrink: "0"
                                         }}>
                                             <Button 
                                                 size="sm"
                                                 variant="success"
                                                 onClick={() => this.editItem(index)}
                                                 style={{
-                                                    minWidth: "60px",
-                                                    fontSize: "14px",
+                                                    minWidth: "45px",
+                                                    fontSize: "12px",
                                                     fontWeight: "500",
                                                     backgroundColor: "#28a745",
                                                     borderColor: "#28a745",
                                                     color: "white",
-                                                    padding: "6px 12px",
-                                                    borderRadius: "6px"
+                                                    padding: "4px 8px",
+                                                    borderRadius: "4px",
+                                                    height: "28px"
                                                 }}
                                             >
                                                 Edit
@@ -197,14 +195,15 @@ class App extends Component {
                                                 variant="danger"
                                                 onClick={() => this.deleteItem(item.id)}
                                                 style={{
-                                                    minWidth: "70px",
-                                                    fontSize: "14px",
+                                                    minWidth: "50px",
+                                                    fontSize: "12px",
                                                     fontWeight: "500",
                                                     backgroundColor: "#dc3545",
                                                     borderColor: "#dc3545",
                                                     color: "white",
-                                                    padding: "6px 12px",
-                                                    borderRadius: "6px"
+                                                    padding: "4px 8px",
+                                                    borderRadius: "4px",
+                                                    height: "28px"
                                                 }}
                                             >
                                                 Delete
