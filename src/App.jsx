@@ -144,37 +144,35 @@ class App extends Component {
                                         className="todo-item"
                                         style={{
                                             display: "flex",
-                                            justifyContent: "space-between",
-                                            alignItems: "flex-start",
-                                            padding: "20px 30px",
+                                            flexDirection: "column",
+                                            padding: "0",
                                             marginBottom: "15px",
                                             backgroundColor: "#ffffff",
                                             border: "2px solid #e9ecef",
                                             borderRadius: "12px",
                                             boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                                            minHeight: "auto"
+                                            overflow: "hidden"
                                         }}
                                     >
                                         <div className="todo-text" style={{
                                             fontSize: "18px",
                                             fontWeight: "500",
                                             color: "#2c3e50",
-                                            flex: "1",
-                                            textAlign: "left",
-                                            marginRight: "20px",
+                                            padding: "20px 30px",
                                             lineHeight: "1.6",
                                             wordWrap: "break-word",
                                             overflowWrap: "break-word",
-                                            hyphens: "auto"
+                                            hyphens: "auto",
+                                            borderBottom: "1px solid #f1f3f4"
                                         }}>
                                             {item.value}
                                         </div>
                                         <div className="button-group" style={{
                                             display: "flex",
-                                            gap: "8px",
-                                            flexShrink: "0",
-                                            alignSelf: "flex-start",
-                                            marginTop: "4px"
+                                            gap: "10px",
+                                            padding: "15px 30px",
+                                            backgroundColor: "#f8f9fa",
+                                            justifyContent: "flex-end"
                                         }}>
                                             <Button 
                                                 variant="success"
