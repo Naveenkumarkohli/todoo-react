@@ -94,8 +94,11 @@ class App extends Component {
 
                 <hr />
                 <Row>
-                    <Col md={{ span: 5, offset: 4 }}>
-                        <InputGroup className="mb-3">
+                    <Col md={{ span: 8, offset: 2 }}>
+                        <InputGroup className="mb-3" style={{
+                            display: "flex",
+                            alignItems: "stretch"
+                        }}>
                             <FormControl
                                 placeholder="add item . . . "
                                 size="lg"
@@ -105,21 +108,33 @@ class App extends Component {
                                 }
                                 aria-label="add something"
                                 aria-describedby="basic-addon2"
+                                style={{
+                                    borderRadius: "8px 0 0 8px",
+                                    border: "2px solid #dee2e6",
+                                    fontSize: "16px",
+                                    padding: "12px 16px"
+                                }}
                             />
-                            <InputGroup>
-                                <Button
-                                    variant="dark"
-                                    className="mt-2"
-                                    onClick={() => this.addItem()}
-                                >
-                                    ADD
-                                </Button>
-                            </InputGroup>
+                            <Button
+                                variant="primary"
+                                onClick={() => this.addItem()}
+                                style={{
+                                    borderRadius: "0 8px 8px 0",
+                                    border: "2px solid #007bff",
+                                    borderLeft: "none",
+                                    fontSize: "16px",
+                                    fontWeight: "600",
+                                    padding: "12px 24px",
+                                    minWidth: "80px"
+                                }}
+                            >
+                                ADD
+                            </Button>
                         </InputGroup>
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={{ span: 5, offset: 4 }}>
+                    <Col md={{ span: 8, offset: 2 }}>
                         <ListGroup>
                             {/* map over and print items */}
                             {this.state.list.map((item, index) => {
@@ -157,24 +172,30 @@ class App extends Component {
                                         }}>
                                             <Button 
                                                 size="sm"
-                                                variant="outline-primary"
+                                                variant="success"
                                                 onClick={() => this.editItem(index)}
                                                 style={{
                                                     minWidth: "60px",
                                                     fontSize: "14px",
-                                                    fontWeight: "500"
+                                                    fontWeight: "500",
+                                                    backgroundColor: "#28a745",
+                                                    borderColor: "#28a745",
+                                                    color: "white"
                                                 }}
                                             >
                                                 Edit
                                             </Button>
                                             <Button 
                                                 size="sm"
-                                                variant="outline-danger"
+                                                variant="danger"
                                                 onClick={() => this.deleteItem(item.id)}
                                                 style={{
                                                     minWidth: "70px",
                                                     fontSize: "14px",
-                                                    fontWeight: "500"
+                                                    fontWeight: "500",
+                                                    backgroundColor: "#dc3545",
+                                                    borderColor: "#dc3545",
+                                                    color: "white"
                                                 }}
                                             >
                                                 Delete
